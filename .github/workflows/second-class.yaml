@@ -10,3 +10,11 @@ jobs:
     steps:
       - name: Checkout
         run: echo "Hello, world!"
+
+  second-job:
+    needs: first-job
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        run: echo "Hello, world!"
